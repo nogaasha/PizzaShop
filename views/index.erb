@@ -1,32 +1,36 @@
-<h2>Welcome to Pizza</h2>
-<% @products.each do |p|  %>
-<p>
-   	<div class="col-md-3">
+<h2>Welcome to Pizza Shop!</h2>
+
+<div class="row">
+
+	<% @products.each do |p| %>
+	<div class="col-md-3">
 		<div>
 			<%= p.title %>
 		</div>
-         <div>
+
+		<div>
 			<img src="<%= p.path_to_image %>" />
 		</div>
+
 		<div>
 			<%= p.description %>
 		</div>
+
 		<div>
 			Size: <%= p.size %> cm
 		</div>
-        <div>
+
+		<div>
 			Price: <%= p.price %> rub
 		</div>
-         <div>
+
+		<div>
 			<button class="btn btn-sm btn-success" onclick="add_to_cart(<%= p.id %>)">Add to cart</button>
 		</div>
-		<div>
-		   Item in card: 
-		 </div>   
-	</div>	
-</p>
-<% end %>
-</br>
-<div>
-<button class="btn btn-primary" onclick="enumerate_l_s()">Click Me!</button>
+	</div>
+	<% end %>
+
 </div>
+<br />
+<br />
+
